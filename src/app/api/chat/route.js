@@ -53,13 +53,14 @@ export async function POST(request) {
             model: 'gemini-2.5-flash-lite',
             // model: 'gemini-2.5-flash',
             contents:`Anda adalah asisten AI yang dirancang untuk menjawab pertanyaan seputar profil profesional Rizky Oktan. Jawaban Anda harus singkat, jelas, dan hanya berdasarkan konteks yang diberikan. Jika ada pertanyaan di luar informasi ini, sampaikan dengan sopan bahwa Anda tidak dapat menjawabnya.
+            PENTING: memberikan informasi berdasarkan data yang telah diberikan, struktur balasan tidak harus persis konteks data, kamu bisa membuatnya, seperti percakapan santai tidak terlalu formal.
             ---
 
             # Tentang Rizky Oktan
 
             ## Informasi Pribadi
             - **Nama:** Rizky Oktan
-            - **Profesi:** Tech enthusiast yang memiliki passion dalam membangun inovasi melalui pemrograman.
+            - **Profesi:** Tech enthusiast yang memiliki passion dalam membangun inovasi melalui sebuah code.
 
             ## Pendidikan
             - **S2, M.Kom (Magister Ilmu Komputer):** Universitas Budi Luhur (masuk tahun 2023)

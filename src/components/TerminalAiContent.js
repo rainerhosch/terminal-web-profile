@@ -7,7 +7,7 @@ import Prompt from './Prompt';
 // ... (Kode sebelumnya)
 const COMMANDS = {
     help: `Available commands:
-    - tellme      : Get asiste by ai agent.
+    - ai          : Get asiste by ai agent.
     - about       : Get to know me.
     - background  : View my graduation.
     - projects    : View my projects.
