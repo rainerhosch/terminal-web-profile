@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 export const metadata = {
   // Open Graph (Untuk semua platform seperti WhatsApp, Facebook, LinkedIn)
   openGraph: {
-    title: 'Rizky Oktan | Tech Enthusiast & Developer',
-    description: 'Portfolio Rizky Oktan, seorang tech enthusiast dengan keahlian di bidang Full Stack Development, AI, dan Web3.',
+    title: 'Personal Portfolio',
+    description: 'Portfolio Rizky Oktan, seorang tech enthusiast dengan keahlian di bidang Software Developer, AI, dan Web3.',
     url: 'https://rizkyoktan.my.id',
     siteName: 'Rizky Oktan Portfolio',
     images: [
