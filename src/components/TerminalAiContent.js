@@ -51,12 +51,12 @@ export default function TerminalAiContent() {
     const handleCommand = async (command) => {
         
         // Tambahkan perintah AI
-        if (command.startsWith('tellme')) {
+        if (command.startsWith('ai')) {
             const prompt = command.substring(3).trim();
             setHistory(prev => [
                 ...prev,
                 { type: 'input', text: command },
-                { type: 'output', text: 'Thinking...' }
+                { type: 'output', text: 'Thinking...\n' }
             ]);
 
             try {
@@ -85,7 +85,7 @@ export default function TerminalAiContent() {
             }
         } else {
             // Perintah internal yang sudah ada
-            const output = COMMANDS[command] || `Command not found: ${command}. Type \`help\` for a list of commands or \`tellme [your question]\` to ask my AI assistant.`;
+            const output = COMMANDS[command] || `Command not found: ${command}. Type \`help\` for a list of commands or \`ai [your question]\` to ask my AI assistant.`;
             setHistory(prev => [
                 ...prev,
                 { type: 'input', text: command },
@@ -112,7 +112,7 @@ export default function TerminalAiContent() {
     return (
         <div className="p-4 text-green-400 h-[calc(100%-40px)] overflow-y-auto">
             <div className="mb-2">
-                <TypingEffect text="Hello, and Welcome to my portfolio! Type `help` to get started or `tellme [your question]` to ask my AI assistant." />
+                <TypingEffect text="Hello, and Welcome to my portfolio! Type `help` to get started or `ai [your question]` to ask my AI assistant." />
             </div>
             {history.map((entry, index) => (
                 <div key={index} className="mb-2">
