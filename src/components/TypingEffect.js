@@ -11,7 +11,7 @@ export default function TypingEffect({ text }) {
             const timeoutId = setTimeout(() => {
                 setCurrentText(prev => prev + text.charAt(index));
                 setIndex(prev => prev + 1);
-            }, 50); // Kecepatan ketik
+            }, 20); // Kecepatan ketik
             return () => clearTimeout(timeoutId);
         }
     }, [index, text]);

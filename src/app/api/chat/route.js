@@ -63,8 +63,8 @@ export async function POST(request) {
             - **Profesi:** Tech enthusiast yang memiliki passion dalam membangun inovasi melalui sebuah code.
 
             ## Pendidikan
-            - **S2, M.Kom (Magister Ilmu Komputer):** Universitas Budi Luhur (masuk tahun 2023)
-            - **S1, S.Kom (Teknik Informatika):** STT Wastukancana (2014-2019)
+            - **S2, M.Kom (Magister Ilmu Komputer):** Universitas Budi Luhur (masuk tahun 2023-2026)
+            - **S1, S.Kom (Teknik Informatika):** STT Wastukancana (2014-2020)
             - **Kursus: Database Professional Application:** Coding Studio (2023)
             - **Kursus: Ethereum Developer Bootcamp:** Ethereum Developer (2021)
 

@@ -44,19 +44,21 @@ const COMMANDS = {
 export default function TerminalAiContent() {
     // ... (State dan variabel lainnya)
     const [history, setHistory] = useState([
-        // { type: 'output', text: 'Welcome to my portfolio! Type `help` to get started.' }
+        { type: 'output', text: 'Terminal portfolio v1.0' }
     ]);
     const [input, setInput] = useState('');
+    const [aiCommand, setAiCommand] = useState(false);
 
     const handleCommand = async (command) => {
         
         // Tambahkan perintah AI
         if (command.startsWith('ai')) {
+            setAiCommand(true);
             const prompt = command.substring(3).trim();
             setHistory(prev => [
                 ...prev,
                 { type: 'input', text: command },
-                { type: 'output', text: 'Thinking...\n' }
+                { type: 'output', text: 'Thinking...' }
             ]);
 
             try {
@@ -103,6 +105,7 @@ export default function TerminalAiContent() {
                 handleCommand(command);
             }
             setInput('');
+            console.log(history)
         }
     };
 
@@ -110,14 +113,17 @@ export default function TerminalAiContent() {
     // Perbarui pesan sambutan di `TypingEffect` atau di `history` awal
     // "Welcome to my portfolio! Type `help` to get started or `ai [your question]` to ask my AI assistant."
     return (
-        <div className="p-4 text-green-400 h-[calc(100%-40px)] overflow-y-auto">
+        <div className="p-4 text-white/70 h-[calc(100%-40px)] overflow-y-auto">
             <div className="mb-2">
                 <TypingEffect text="Hello, and Welcome to my portfolio! Type `help` to get started or `ai [your question]` to ask my AI assistant." />
             </div>
             {history.map((entry, index) => (
                 <div key={index} className="mb-2">
                     {entry.type === 'input' && <Prompt command={entry.text} />}
-                    {entry.type === 'output' && <pre className="whitespace-pre-wrap"><TypingEffect text={entry.text}/></pre>}
+                    {/* {entry.type === 'output' && <pre className="whitespace-pre-wrap">{entry.text}</pre>} */}
+                    {entry.type === 'output' && <pre className="whitespace-pre-wrap">
+                        {aiCommand === true ? entry.text : <TypingEffect text={entry.text} />}
+                    </pre>}
                 </div>
             ))}
             <div className="flex items-center">
