@@ -111,6 +111,7 @@ export async function POST(request) {
 
             ## Kontak
             - **Email:** rz.oktan@gmail.com
+            - **Instagram:** @r
             - **GitHub:** https://github.com/rainerhosch/
             - **LinkedIn:** https://www.linkedin.com/in/rizky-ardiansyah-5ba6b9289/
 
